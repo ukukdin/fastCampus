@@ -25,6 +25,7 @@ public class UserService {
 
         if(optionUser.isPresent()){
             var userDto = optionUser.get();
+
             if(userDto.getPassword().equals(pw)){
                 // 세션에다가 저장을 할거다 서버에서 관리하는것이다.
                 httpSession.setAttribute("USER", userDto);
