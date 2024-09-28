@@ -20,11 +20,12 @@ public class AccountApiController {
 
     @GetMapping("/me")
     public Api<AccountMeResponse> me(){
-        var response = AccountMeResponse.builder()
-                .name("홍길동")
-                .email("A@Gamil.com")
-                .registeredAt(LocalDateTime.now())
-                .build();
+       var response = AccountMeResponse.builder()
+               .name("홍길동")
+               .email("A@Gamil.com")
+               .registeredAt(LocalDateTime.now())
+               .build();
+
        return Api.OK(response);
     }
 }

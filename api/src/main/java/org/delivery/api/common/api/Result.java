@@ -38,10 +38,10 @@ public class Result {
         return Result.builder()
                 .resultCode(errorCodeIfs.getErrorCode())
                 .resultMessage(errorCodeIfs.getDescription())
-                .resultDescription(tx.getLocalizedMessage()) //조금 위험할수 잇는 코드이지만 추후에 배움으로 이해할수 잇을것이다.
+                .resultDescription(tx.getLocalizedMessage()) //조금 위험할수 잇는 코드이지만 추후에 배움으로 이해할수 잇을것이다. 그 이후는 서버의 모든 스텍트렉스가 다 내려간다.
                 .build();
     }
-
+    //평균적으로 많이 사용하는 경우 ( 에러코드와 어떤 상황이다라는 description 넘겨주면 에러코드와 메세지 세팅하고 description 담아주는것)
     public static Result ERROR(ErrorCodeIfs errorCodeIfs, String description){
         return Result.builder()
                 .resultCode(errorCodeIfs.getErrorCode())
