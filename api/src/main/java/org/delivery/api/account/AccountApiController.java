@@ -25,7 +25,8 @@ public class AccountApiController {
                .email("A@Gamil.com")
                .registeredAt(LocalDateTime.now())
                .build();
-
+        var str = "안녕하세요";
+        var age = Integer.parseInt(str);
        return Api.OK(response);
     }
 }
