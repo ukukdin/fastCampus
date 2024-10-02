@@ -27,5 +27,5 @@ public class GlobalExceptionHandler {
             );
     }
 
-    //handler는  모듈에서 공통적으로 일괄 처리해주는것도 좋은 방법인거같습니다.
+    //handler는  모듈에서 공통적으로
 }
