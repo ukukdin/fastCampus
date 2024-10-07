@@ -31,6 +31,7 @@ public class UserEntity extends BaseEntity {
     @Column(length = 150, nullable = false)
     private String address;
 
+    @Column(name = "registered_at")
     private LocalDateTime registeredAt;
 
     private LocalDateTime unregisteredAt;
