@@ -11,7 +11,7 @@ import java.util.List;
 //webmvc를 담당하는 핸들러를 상속받는다.
 @RequiredArgsConstructor
 @Configuration
-public class WebConfig implements WebMvcConfigurer {
+public class  WebConfig implements WebMvcConfigurer {
 
     private final AuthorizationInterceptor authorizationInterceptor;
 
