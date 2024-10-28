@@ -22,11 +22,14 @@ public class StoreRegisterRequest {
     @NotNull
     private StoreCategory storeCategory;
 
+    @NotBlank
     private String thumbnailUrl;
 
+    @NotNull
     private BigDecimal minimumAmount;
 
+    @NotNull
     private BigDecimal minimumDeliveryAmount;
-
+    @NotBlank
     private String phoneNumber;
 }
