@@ -17,6 +17,7 @@ configurations {
     }
 }
 dependencies {
+    implementation 'org.jetbrains:annotations:23.0.0'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
