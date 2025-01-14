@@ -32,8 +32,12 @@ public class SecurityConfig {
                       SWAGGER.toArray(new String[0])
                   ).permitAll()
 
-                  //그 외의 모든 요청은 인증 사용
-                  .anyRequest().authenticated();
+                  // open-api/** 하위 모든 주소는 인증 없이 통과
+                  .mvcMatchers(
+                      "/open-api/**"
+                  ).permitAll()
+                    //그 외의 모든 요청은 인증 사용
+                    .anyRequest().authenticated();
           })
           .formLogin(Customizer.withDefaults());
 
