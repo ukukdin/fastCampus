@@ -18,6 +18,14 @@ public class UserOrderService {
 
   private final UserOrderRepository userOrderRepository;
 
+  public UserOrderEntity getUserOrderWithOutStatusWithThrow(
+      Long id,
+      Long userId
+  ){
+    return userOrderRepository.findAllByIdAndUserId(id, userId)
+        .orElseThrow(() -> new ApiException(ErrorCode.NULL_POINT));
+  }
+
   //주문 등등 여러가지들이 있으니 인터페이스를 만들어보자;
   //해당 유저의 주문을 가져오는 구문
 
