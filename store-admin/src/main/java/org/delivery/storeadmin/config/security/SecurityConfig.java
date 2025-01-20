@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
@@ -42,5 +44,10 @@ public class SecurityConfig {
           .formLogin(Customizer.withDefaults());
 
       return httpSecurity.build();
+  }
+  @Bean
+  public PasswordEncoder passwordEncoder(){
+      //hash 방식으로 암호화 -> sort 를 넣는다. 비번이 들어오면 해쉬를 시켜서 값이 동일한지 비교한다. 디코딩 불가 오로지 인코딩만 가능.
+      return new BCryptPasswordEncoder();
   }
 }
