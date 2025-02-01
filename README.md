@@ -22,3 +22,5 @@
 
 spring security를 추가했습니다.
 앞으로 public api 와 private api 를 분리해서 swagger에 볼수있도록 로직을 짜보도록하겠습니다.
+
+모듈을 잘 공부하고 마쳤습니다. 한가지 강의만 더 듣고 와서 후기를 적도록 하겠습니다. 
